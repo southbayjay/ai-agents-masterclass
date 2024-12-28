@@ -11,6 +11,7 @@ x-n8n: &service-n8n
   image: n8nio/n8n:latest
   networks: ['demo']
   environment:
+    - WEBHOOK_URL=agents.southbayjay.dev
     - DB_TYPE=postgresdb
     - DB_POSTGRESDB_HOST=postgres
     - DB_POSTGRESDB_USER=${POSTGRES_USER}
